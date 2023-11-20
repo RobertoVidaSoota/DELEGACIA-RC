@@ -14,15 +14,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('ocorrencia', function (Blueprint $table) {
             $table->uuid("id")->primary()->default(DB::raw("(UUID())"));
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->uuid('id_investigador')->nullable();
-            $table->uuid('id_delegado')->nullable();
-            $table->rememberToken();
+            $table->string("numero_ocorrencia", 80);
+            $table->string("titulo_ocorrencia", 40);
+            $table->string("tipo_ocorrencia", 20);
+            $table->text("detalhes_ocorrencia");
+            $table->enum("situacao_ocorrencia", ["em espera", "atendendo", "resolvida", "fracassada"]);
+            $table->uuid("id_delegado");
             $table->timestamps();
         });
     }
@@ -34,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        //
     }
 };

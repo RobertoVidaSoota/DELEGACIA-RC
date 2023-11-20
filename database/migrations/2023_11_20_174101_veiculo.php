@@ -14,15 +14,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('veiculo', function (Blueprint $table) {
             $table->uuid("id")->primary()->default(DB::raw("(UUID())"));
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->uuid('id_investigador')->nullable();
-            $table->uuid('id_delegado')->nullable();
-            $table->rememberToken();
+            $table->string("numero_veiculo", 80);
+            $table->string("nome_veiculo", 40);
+            $table->string("placa_veiculo", 10);
+            $table->string("tipo_veiculo", 30);
+            $table->text("imagem_veiculo");
+            $table->enum("disponibilidade_veiculo", ["operando", "em manutencao", "disponivel"]);
+            $table->uuid("id_equipe");
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        //
     }
 };
