@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -17,4 +19,23 @@ use Inertia\Inertia;
 // LOGIN DO USUARIO
 Route::get('/', function () {
     return Inertia::render("Login");
+})->name("login");
+
+// SAIR DA CONTA
+Route::get("/logout-user", function(Request $request){
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    return redirect()->to("/");
+});
+
+
+
+// ==== ÁREA RESTRITA DO SISTEMA ====
+Route::middleware("auth:admin")->group(function(){
+    
+    Route::get('/inicio', function(){
+        return Inertia::render("AppModule/Login");
+    });
 });
