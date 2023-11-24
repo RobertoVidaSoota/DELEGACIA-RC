@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter";
+}
+
+input{
+    height: 40px;   
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #8A8A8A;
+    background: #F5F5F5;
+    margin-bottom: 20px;
+    padding-left: 14px;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+input[type=checkbox]{
+    height: 15px;
+    margin-bottom: 0 !important;
+}
+::placeholder
+{
+    color: #8F8F8F;
+}
+button{}
+button:hover{opacity: 0.8;}
