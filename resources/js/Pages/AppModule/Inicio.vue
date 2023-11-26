@@ -4,7 +4,7 @@
     <Nav />
 
     <main>
-
+        <h1>Inicio</h1>
         <Footer />
     </main>
 </template>

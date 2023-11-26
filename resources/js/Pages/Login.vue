@@ -51,9 +51,11 @@ body
 main.main-login{
   display: flex;
   justify-content: space-around;
-  margin-top: 80px;
-  width: 90%;
+  margin-left: 0 !important;
+  margin-top: 80px !important;
+  width: 90% !important;
   height: 98vh;
+  padding: 0 !important;
 }
 aside.aside-login{
   width: 40%;

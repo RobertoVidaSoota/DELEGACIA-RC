@@ -8,6 +8,14 @@
     padding: 0;
     margin: 0;
     font-family: "Inter";
+    color: #fff;
+}
+html, body
+{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(0deg, #0E1643 0%, 
+  rgb(13, 35, 145) 142.36%) !important;
 }
 
 input{
@@ -33,3 +41,37 @@ input[type=checkbox]{
 }
 button{}
 button:hover{opacity: 0.8;}
+
+/* SEMANTICA */
+
+header
+{
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background-color: #1F1E1E;
+}
+nav
+{
+    position: fixed;
+    width: 15%;
+    height: 100vh;
+    margin-top: 55px;
+    background-color: #1F1E1E;
+}
+main
+{
+    width: 85%;
+    margin-left: 15%;
+    margin-top: 0px;
+    padding: 65px 15px 15px 15px;
+}
+footer
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #1F1E1E;
+    left: 0;
+    bottom: 0;
+}

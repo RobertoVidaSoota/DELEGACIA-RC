@@ -39,11 +39,11 @@ Route::get("/logout-user", function(Request $request){
 
 
 // ==== ÁREA RESTRITA DO SISTEMA ====
-Route::middleware("auth:admin")->group(function(){
+// Route::middleware("auth:admin")->group(function(){
    
     // ROTAS DE PÁGINAS
     Route::get('/inicio', function(){
-        return Inertia::render("AppModule/Login");
+        return Inertia::render("AppModule/Inicio");
     });
     Route::get('/apreencoes', function(){
         return Inertia::render("AppModule/Apreencoes/Apreencoes");
@@ -72,4 +72,4 @@ Route::middleware("auth:admin")->group(function(){
     Route::get('/veiculos', function(){
         return Inertia::render("AppModule/Veiculos/Veiculos");
     });
-});
+// });
