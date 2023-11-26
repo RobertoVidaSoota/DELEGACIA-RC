@@ -4,7 +4,7 @@
     <Nav />
 
     <main>
-        <h1>Denuncias</h1>
+        <h1>Denúncias</h1>
         <Footer />
     </main>
 </template>
@@ -14,9 +14,7 @@ import Nav from "../../Components/Nav.vue";
 import Header from "../../Components/Header.vue";
 import Footer from "../../Components/Footer.vue"
 import Table from "../../Main/Table.vue";
-import Cards from "../../Main/Cards.vue";
 import ButtonAdd from "../../Main/ButtonAdd.vue";
-import ButtonAdd from "../Main/ButtonAdd.vue";
 import FormDenuncias from "./FormDenuncias.vue";
 </script>
 
