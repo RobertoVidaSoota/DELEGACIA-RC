@@ -16,6 +16,12 @@ use Inertia\Inertia;
 |
 */
 
+// --- INDICE ---
+// 
+// ÁREA RESTRITA DO SISTEMA
+// - ROTAS DE PÁGINAS
+
+
 // LOGIN DO USUARIO
 Route::get('/', function () {
     return Inertia::render("Login");
@@ -34,8 +40,36 @@ Route::get("/logout-user", function(Request $request){
 
 // ==== ÁREA RESTRITA DO SISTEMA ====
 Route::middleware("auth:admin")->group(function(){
-    
+   
+    // ROTAS DE PÁGINAS
     Route::get('/inicio', function(){
         return Inertia::render("AppModule/Login");
+    });
+    Route::get('/apreencoes', function(){
+        return Inertia::render("AppModule/Apreencoes/Apreencoes");
+    });
+    Route::get('/casos', function(){
+        return Inertia::render("AppModule/Casos/Casos");
+    });
+    Route::get('/configuracoes', function(){
+        return Inertia::render("AppModule/Configuracoes/Configuracoes");
+    });
+    Route::get('/denuncias', function(){
+        return Inertia::render("AppModule/Denuncias/Denuncias");
+    });
+    Route::get('/equipamento', function(){
+        return Inertia::render("AppModule/Equipamento/Equipamento");
+    });
+    Route::get('/equipe', function(){
+        return Inertia::render("AppModule/Equipe/Equipe");
+    });
+    Route::get('/ocorrencias', function(){
+        return Inertia::render("AppModule/Ocorrencias/Ocorrencias");
+    });
+    Route::get('/relatorios', function(){
+        return Inertia::render("AppModule/Relatorios/Relatorios");
+    });
+    Route::get('/veiculos', function(){
+        return Inertia::render("AppModule/Veiculos/Veiculos");
     });
 });
