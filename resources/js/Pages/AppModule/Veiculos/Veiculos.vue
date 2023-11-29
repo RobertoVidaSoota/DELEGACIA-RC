@@ -5,6 +5,11 @@
 
     <main>
         <h1>Veículos</h1>
+
+        <ButtonAdd nameButton="Adicionar veículo"/>
+
+        <Cards />
+
         <Footer />
     </main>
 </template>

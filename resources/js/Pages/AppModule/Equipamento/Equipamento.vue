@@ -5,6 +5,11 @@
 
     <main>
         <h1>Equipamento</h1>
+
+        <ButtonAdd nameButton="Adicionar equipamento"/>
+
+        <Cards />
+
         <Footer />
     </main>
 </template>

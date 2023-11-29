@@ -5,6 +5,11 @@
 
     <main>
         <h1>Ocorrências</h1>
+
+        <ButtonAdd nameButton="Adicionar ocorrência"/>
+
+        <Table />
+
         <Footer />
     </main>
 </template>

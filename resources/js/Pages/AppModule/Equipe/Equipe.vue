@@ -5,6 +5,11 @@
 
     <main>
         <h1>Equipe</h1>
+
+        <ButtonAdd nameButton="Adicionar soldado"/>
+
+        <Cards />
+
         <Footer />
     </main>
 </template>

@@ -5,6 +5,11 @@
 
     <main>
         <h1>Denúncias</h1>
+
+        <ButtonAdd nameButton="Adicionar denúnica"/>
+
+        <Table />
+
         <Footer />
     </main>
 </template>

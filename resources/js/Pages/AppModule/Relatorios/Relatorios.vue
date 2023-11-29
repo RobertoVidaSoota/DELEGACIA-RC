@@ -5,6 +5,11 @@
 
     <main>
         <h1>Relatórios</h1>
+
+        <ButtonAdd nameButton="Adicionar relatório"/>
+
+        <Table />
+
         <Footer />
     </main>
 </template>
