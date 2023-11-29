@@ -42,11 +42,20 @@ input[type=checkbox]{
 button{}
 button:hover{opacity: 0.8;}
 
+h1
+{
+    margin-bottom: 20px;
+}
+
 /* SEMANTICA */
 
 header
 {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     width: 100%;
     height: 55px;
     background-color: #1F1E1E;

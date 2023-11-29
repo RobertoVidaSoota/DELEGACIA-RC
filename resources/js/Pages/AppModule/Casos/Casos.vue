@@ -5,7 +5,10 @@
 
     <main>
         <h1>Casos</h1>
-        <Table :tableHead="tHeads" :dataTable="data"/>
+
+        <ButtonAdd nameButton="Adicionar caso" />
+
+        <Table :tableHeads="tHeads" :dataTables="data"/>
         <Footer />
     </main>
 </template>
