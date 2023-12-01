@@ -8,7 +8,7 @@
 
         <ButtonAdd nameButton="Adicionar caso" />
 
-        <Table :tableHeads="tHeads" :dataTables="data"/>
+        <Table :tableHeads="tHeads" :dataKeys="dataKeys" :dataTables="data"/>
         <Footer />
     </main>
 </template>
@@ -22,15 +22,16 @@ import ButtonAdd from "../../Main/ButtonAdd.vue";
 import FormCasos from "./FormCasos.vue";
 
 const tHeads = ["Número", "Título", "Prioridade", "Data"]
+const dataKeys = ["numero_caso", "titulo_caso", "prioridade_caso", "created_at"]
 const data = [
     {
-        "Número": "1", "Título": "1 caso", "Prioridade": "Média", "Data": "01/01/2020"
+        "numero_caso": "1", "titulo_caso": "1 caso", "prioridade_caso": "Média", "created_at": "01/01/2020"
     },
     {
-        "Número": "2", "Título": "2 caso", "Prioridade": "Alta", "Data": "01/01/2020"
+        "numero_caso": "2", "titulo_caso": "2 caso", "prioridade_caso": "Alta", "created_at": "01/01/2020"
     },
     {
-        "Número": "3", "Título": "3 caso", "Prioridade": "Baixa", "Data": "01/01/2020"
+        "numero_caso": "3", "titulo_caso": "3 caso", "prioridade_caso": "Baixa", "created_at": "01/01/2020"
     },
 ]
 

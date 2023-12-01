@@ -10,8 +10,8 @@
             </thead>
             <tbody>
                 <tr v-for="dataTable in dataTables" :key="dataTable.id">
-                    <td v-for="tableHead2 in tableHeads" :key="tableHead2">
-                        {{ dataTable[tableHead2] }}
+                    <td v-for="key in dataKeys" :key="key">
+                        {{ dataTable[key] }}
                     </td>
                 </tr>
             </tbody>
@@ -26,7 +26,8 @@
 
 defineProps({
     tableHeads: Array,
-    dataTables: Object
+    dataKeys: Array,
+    dataTables: Object,
 })
 </script>
 
