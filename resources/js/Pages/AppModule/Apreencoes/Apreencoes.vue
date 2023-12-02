@@ -12,6 +12,8 @@
 
         <Footer />
     </main>
+
+    <FormApreencoes />
 </template>
 
 <script setup>

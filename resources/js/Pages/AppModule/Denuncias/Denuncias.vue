@@ -12,6 +12,7 @@
 
         <Footer />
     </main>
+    <FormDenuncias />
 </template>
 
 <script setup>

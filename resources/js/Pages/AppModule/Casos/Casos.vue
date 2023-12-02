@@ -11,6 +11,8 @@
         <Table :tableHeads="tHeads" :dataKeys="dataKeys" :dataTables="data"/>
         <Footer />
     </main>
+
+    <FormCasos />
 </template>
 
 <script setup>

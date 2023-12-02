@@ -1,4 +1,16 @@
 <template>
+    <div class="modal_form">
+        <div class="modal_form_content">
+            <form class="box_form">
+                <div class="box_input">
+                    <input type="text" placeholder="nome">
+                </div>
+                <div class="box_input">
+                    <input type="text" placeholder="nome">
+                </div>
+            </form>
+        </div>
+    </div>
 </template>
 
 <script setup>
