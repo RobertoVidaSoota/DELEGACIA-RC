@@ -26,65 +26,68 @@
         </div>
 
         <!-- GRÁFICOS -->
-        <div class="box_analise resolvidos_periodo">
-            <div class="header_analise header_resolvidos_periodo">
-                <h3 class="titulo_analise titulo_casos_periodo">Casos resolvidos</h3>
-                <select name="" id="">
-                    <option selected value="">Hoje</option>
-                    <option value="">7 dias</option>
-                    <option value="">2 semanas</option>
-                    <option value="">1 mês</option>
-                </select>
+        <div class="box_content_graficos">
+            <div class="box_analise resolvidos_periodo">
+                <div class="header_analise header_resolvidos_periodo">
+                    <h3 class="titulo_analise titulo_casos_periodo">Casos resolvidos</h3>
+                    <select name="" id="">
+                        <option selected value="">Hoje</option>
+                        <option value="">7 dias</option>
+                        <option value="">2 semanas</option>
+                        <option value="">1 mês</option>
+                    </select>
+                </div>
+                <div class="box_grafico">
+                    <canvas id="canva_1"></canvas>
+                </div>
             </div>
-            <div class="box_grafico">
-                <canvas id="canva_1"></canvas>
-            </div>
-        </div>
 
-        <div class="box_analise resolvidos_periodo">
-            <div class="header_analise header_resolvidos_periodo">
-                <h3 class="titulo_analise titulo_casos_periodo">Casos fracassados</h3>
-                <select name="" id="">
-                    <option selected value="">Hoje</option>
-                    <option value="">7 dias</option>
-                    <option value="">2 semanas</option>
-                    <option value="">1 mês</option>
-                </select>
+            <div class="box_analise resolvidos_periodo">
+                <div class="header_analise header_resolvidos_periodo">
+                    <h3 class="titulo_analise titulo_casos_periodo">Casos fracassados</h3>
+                    <select name="" id="">
+                        <option selected value="">Hoje</option>
+                        <option value="">7 dias</option>
+                        <option value="">2 semanas</option>
+                        <option value="">1 mês</option>
+                    </select>
+                </div>
+                <div class="box_grafico">
+                    <canvas id="canva_2"></canvas>
+                </div>
             </div>
-            <div class="box_grafico">
-                <canvas id="canva_2"></canvas>
-            </div>
-        </div>
 
-        <div class="box_analise resolvidos_periodo">
-            <div class="header_analise header_resolvidos_periodo">
-                <h3 class="titulo_analise titulo_casos_periodo">Casos arquivados</h3>
-                <select name="" id="">
-                    <option selected value="">Hoje</option>
-                    <option value="">7 dias</option>
-                    <option value="">2 semanas</option>
-                    <option value="">1 mês</option>
-                </select>
+            <div class="box_analise resolvidos_periodo">
+                <div class="header_analise header_resolvidos_periodo">
+                    <h3 class="titulo_analise titulo_casos_periodo">Casos arquivados</h3>
+                    <select name="" id="">
+                        <option selected value="">Hoje</option>
+                        <option value="">7 dias</option>
+                        <option value="">2 semanas</option>
+                        <option value="">1 mês</option>
+                    </select>
+                </div>
+                <div class="box_grafico">
+                    <canvas id="canva_3"></canvas>
+                </div>
             </div>
-            <div class="box_grafico">
-                <canvas id="canva_3"></canvas>
-            </div>
-        </div>
 
-        <div class="box_analise resolvidos_periodo">
-            <div class="header_analise header_resolvidos_periodo">
-                <h3 class="titulo_analise titulo_casos_periodo">Casos abertos</h3>
-                <select name="" id="">
-                    <option selected value="">Hoje</option>
-                    <option value="">7 dias</option>
-                    <option value="">2 semanas</option>
-                    <option value="">1 mês</option>
-                </select>
-            </div>
-            <div class="box_grafico">
-                <canvas id="canva_4"></canvas>
+            <div class="box_analise resolvidos_periodo">
+                <div class="header_analise header_resolvidos_periodo">
+                    <h3 class="titulo_analise titulo_casos_periodo">Casos abertos</h3>
+                    <select name="" id="">
+                        <option selected value="">Hoje</option>
+                        <option value="">7 dias</option>
+                        <option value="">2 semanas</option>
+                        <option value="">1 mês</option>
+                    </select>
+                </div>
+                <div class="box_grafico">
+                    <canvas id="canva_4"></canvas>
+                </div>
             </div>
         </div>
+        
 
         <Footer />
     </main>
@@ -174,6 +177,7 @@ onMounted(() =>{
             scales: {
                 yAxis:
                 {
+                    // Info do eixo Y
                     ticks:{
                         color: "#ffffff",
                         font: {
@@ -183,6 +187,7 @@ onMounted(() =>{
                 },
                 xAxis:
                 {
+                    // Info do eixo X
                     ticks:{
                         color: "#ffffff",
                         font: {
@@ -344,9 +349,15 @@ onMounted(() =>{
 .abertos{color: #21B7E7;}
 
 /* GRÁFICOS */
+.box_content_graficos
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .box_analise, .resolvidos_periodo
 {
-    width: 100%;
+    width: 48%;
     height: fit-content;
     padding: 20px;
     margin-bottom: 20px;
