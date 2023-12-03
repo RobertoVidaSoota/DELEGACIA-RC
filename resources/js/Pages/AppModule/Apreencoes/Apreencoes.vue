@@ -6,14 +6,20 @@
     <main>
         <h1>Apreenções</h1>
 
-        <ButtonAdd nameButton="Adicionar apreenção"/>
+        <ButtonAdd @click="modal_casos_effect" nameButton="Adicionar apreenção"/>
 
         <Cards :dataCard="dataAPI" />
 
         <Footer />
     </main>
 
-    <FormApreencoes />
+    <FormApreencoes v-show="retorno.modalCase == true">
+        <template #btnClose>
+            <div class="box_close_modal">
+                <p @click="modal_casos_effect">&times;</p>
+            </div>
+        </template>
+    </FormApreencoes>
 </template>
 
 <script setup>
@@ -23,6 +29,7 @@ import Footer from "../../Components/Footer.vue"
 import Cards from "../../Main/Cards.vue";
 import ButtonAdd from "../../Main/ButtonAdd.vue";
 import FormApreencoes from "./FormApreencoes.vue";
+import { reactive } from "vue";
 
 const dataAPI = [
     {
@@ -41,6 +48,22 @@ const dataAPI = [
         info_adicional: "02/07/2010"
     }
 ]
+
+var retorno = reactive({
+    modalCase: false
+})
+
+const modal_casos_effect = () => 
+{
+    if(retorno.modalCase == false)
+    {
+        retorno.modalCase = true
+    }
+    else
+    {
+        retorno.modalCase = false
+    }
+}
 </script>
 
 <style>

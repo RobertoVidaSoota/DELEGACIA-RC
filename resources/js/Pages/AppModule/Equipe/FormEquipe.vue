@@ -1,6 +1,7 @@
 <template>
     <div class="modal_form">
         <div class="modal_form_content">
+            <slot name="btnClose"></slot>
             <form class="box_form">
                 <div class="box_input">
                     <input type="text" placeholder="nome">
