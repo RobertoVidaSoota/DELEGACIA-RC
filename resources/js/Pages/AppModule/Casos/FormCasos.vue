@@ -1,6 +1,7 @@
 <template>
     <div class="modal_form">
         <div class="modal_form_content">
+            <slot name="btnClose"></slot>
             <h2 class="title_modal">CASO</h2>
             <div class="box_form">
                 <div class="box_input">
@@ -91,6 +92,8 @@
 <script setup>
 import ButtonAdd from "../../Main/ButtonAdd.vue"
 import ButtonDelete from "../../Main/ButtonDelete.vue"
+
+
 </script>
 
 <style>

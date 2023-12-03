@@ -9,6 +9,13 @@
 </template>
 
 <script setup>
+import ButtonAdd from "../../Main/ButtonAdd.vue"
+import ButtonDelete from "../../Main/ButtonDelete.vue"
+
+const box_close_modal_effect = () => {
+    var modal = document.querySelector(".modal_form")
+    modal.style.display = "none"
+}
 </script>
 
 <style>

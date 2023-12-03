@@ -8,6 +8,8 @@
 defineProps({
     nameButton: String,
 })
+
+
 </script>
 
 <style>
@@ -27,6 +29,20 @@ defineProps({
     }
 
     /* CSS MODAL */
+    .box_close_modal
+    {
+        margin: 15px 0;
+        height: fit-content;
+    }
+    .box_close_modal p
+    {
+        color: #000;
+        font-size: 40px;
+        width: fit-content;
+        font-weight: 500;
+        margin-left: auto;
+        cursor: pointer;
+    }
     .modal_form
     {
         position: absolute;
@@ -43,7 +59,7 @@ defineProps({
         width: 82%;
         height: 85vh;
         border-radius: 15px;
-        padding: 30px;
+        padding: 20px 50px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 50px;
