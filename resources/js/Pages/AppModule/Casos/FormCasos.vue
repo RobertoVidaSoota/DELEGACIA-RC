@@ -8,13 +8,23 @@
                     <input type="text" placeholder="Título">
                 </div>
                 <div class="box_input">
+                    <select>
+                        <option value="" disabled selected>Situacao</option>
+                        <option value="aberto">Aberto</option>
+                        <option value="fracassado">Fracassado</option>
+                        <option value="resolvido">Resolvido</option>
+                        <option value="arquivado">Arquivado</option>
+                    </select>
+                </div>
+                <div class="box_input">
                     <input type="text" placeholder="Responsável">
                 </div>
                 <div class="box_input">
-                    <select placeholder="Prioridade">
-                        <option value="baixa" selected>baixa</option>
-                        <option value="media">media</option>
-                        <option value="alta">alta</option>
+                    <select>
+                        <option value="" disabled selected>Prioridade</option>
+                        <option value="baixa">Baixa</option>
+                        <option value="media">Media</option>
+                        <option value="alta">Alta</option>
                     </select>
                 </div>
                 <div class="box_input">

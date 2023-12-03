@@ -49,5 +49,4 @@ const modal_effect = () =>
 </script>
 
 <style>
-
 </style>
