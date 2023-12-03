@@ -6,12 +6,20 @@
     <main>
         <h1>Equipamento</h1>
 
-        <ButtonAdd nameButton="Adicionar equipamento"/>
+        <ButtonAdd @click="modal_effect" nameButton="Adicionar equipamento"/>
 
         <Cards />
 
         <Footer />
     </main>
+
+    <FormEquipamento v-show="retorno.modalCase == true">
+        <template #btnClose>
+            <div class="box_close_modal">
+                <p @click="modal_effect">&times;</p>
+            </div>
+        </template>
+    </FormEquipamento>
 </template>
 
 <script setup>
@@ -21,6 +29,23 @@ import Footer from "../../Components/Footer.vue"
 import Cards from "../../Main/Cards.vue";
 import ButtonAdd from "../../Main/ButtonAdd.vue";
 import FormEquipamento from "./FormEquipamento.vue";
+import { reactive } from "vue";
+
+var retorno = reactive({
+    modalCase: false
+})
+
+const modal_effect = () => 
+{
+    if(retorno.modalCase == false)
+    {
+        retorno.modalCase = true
+    }
+    else
+    {
+        retorno.modalCase = false
+    }
+}
 </script>
 
 <style>
