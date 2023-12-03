@@ -26,9 +26,9 @@ defineProps({
     }
     .card_data
     {
-        height: 250px;
+        height: fit-content;
         width: 32%;
-        padding: 10px;
+        padding: 20px;
         border-radius: 10px;
         background: #042A4A;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -48,8 +48,9 @@ defineProps({
     .img_card
     {
         display: block;
-        width: 180px;
-        height: 120px;
+        width: 60%;
+        height: 150px;
+        border-radius: 15px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 12px;
